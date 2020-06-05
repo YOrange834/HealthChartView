@@ -40,6 +40,7 @@
     
     _lineWidth = self.frame.size.width;
     _pillarWidth = _lineWidth / 4.0 * 3.0;
+    _pillarHeight = 7.0;
     
     _HeightColor = [UIColor colorWithRed:251/255.0 green:130/255.0 blue:79/255.0 alpha:1.0];
     _lowColor = [UIColor colorWithRed:250/255.0 green:206/255.0 blue:48/255.0 alpha:1.0];
@@ -73,11 +74,12 @@
     }
     [self createHeaderLine:heigh];
     [self createBootomLine:low];
+    [self createBgLine:heigh low:low];
 }
 
 
 -(void)createHeaderLine:(NSInteger)h{
-    UIBezierPath *progressline = [UIBezierPath bezierPathWithRoundedRect:CGRectMake((_lineWidth - _pillarWidth) / 2.0,(self.maxScale - h) * _oneUnit,_pillarWidth,7) cornerRadius:self.radius];
+    UIBezierPath *progressline = [UIBezierPath bezierPathWithRoundedRect:CGRectMake((_lineWidth - _pillarWidth) / 2.0,(self.maxScale - h) * _oneUnit,_pillarWidth,_pillarHeight) cornerRadius:self.radius];
     [progressline setLineWidth:0.0];
     [progressline setLineCapStyle:kCGLineCapSquare];
     _headleLine.fillColor = [_HeightColor CGColor];
@@ -87,7 +89,7 @@
 
 
 -(void)createBootomLine:(NSInteger)low{
-    UIBezierPath *progressline = [UIBezierPath bezierPathWithRoundedRect:CGRectMake((_lineWidth - _pillarWidth) / 2.0,(self.maxScale - low) * _oneUnit - 7,_pillarWidth,7) cornerRadius:2];
+    UIBezierPath *progressline = [UIBezierPath bezierPathWithRoundedRect:CGRectMake((_lineWidth - _pillarWidth) / 2.0,(self.maxScale - low) * _oneUnit - _pillarHeight,_pillarWidth,_pillarHeight) cornerRadius:2];
     [progressline setLineWidth:0.0];
     [progressline setLineCapStyle:kCGLineCapSquare];
     _bottomLine.fillColor = [_lowColor CGColor];
@@ -102,7 +104,7 @@
     CAGradientLayer *gradientLayer = [CAGradientLayer layer];
     gradientLayer.startPoint = CGPointMake(0.0,0.0);
     gradientLayer.endPoint = CGPointMake(0.0 ,1.0);
-    gradientLayer.frame = CGRectMake((_lineWidth - _pillarWidth) / 2.0 + 1 , (self.maxScale - heigh) * _oneUnit  + 7, _pillarWidth - 2, (heigh - low) * _oneUnit - 14);
+    gradientLayer.frame = CGRectMake((_lineWidth - _pillarWidth) / 2.0 + 1 , (self.maxScale - heigh) * _oneUnit  + _pillarHeight, _pillarWidth - 2, (heigh - low) * _oneUnit - _pillarHeight);
     
     NSMutableArray *colors = [NSMutableArray array];
     for (int i = 0; i < self.colorArr.count; i++) {

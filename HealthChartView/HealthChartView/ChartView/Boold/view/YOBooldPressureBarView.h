@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 ///柱体的宽度，默认为width的 3/4
 @property (assign, nonatomic) CGFloat pillarWidth;
 
+///柱体的宽度，默认为7
+@property (assign, nonatomic) CGFloat pillarHeight;
+
 ///高压的颜色
 @property (strong, nonatomic) UIColor *HeightColor;
 

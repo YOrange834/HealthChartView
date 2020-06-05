@@ -13,8 +13,11 @@
 -(instancetype)init{
     if (self = [super init]) {
         _dataArr = @[];
+        _rateArr = @[];
         _lableFont = [UIFont systemFontOfSize:14];
         _lableColor = [UIColor grayColor];
+        _lableHeight = 20.0;
+        _alignment = NSTextAlignmentCenter;
         _yColor = [UIColor grayColor];
         _yWidth = 0.5;
         _isShowY = YES;

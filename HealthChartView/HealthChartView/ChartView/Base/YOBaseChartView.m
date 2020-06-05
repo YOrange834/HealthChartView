@@ -13,6 +13,8 @@
 ///x轴刻度数组
 @property (strong, nonatomic) NSMutableArray *xChartLabelsArr;
 
+///Y轴刻度
+@property (strong, nonatomic) NSMutableArray *yChartLabelsArr;
 
 ///x刻度线
 @property (strong, nonatomic) CAShapeLayer * chartXAxisLine;
@@ -46,6 +48,7 @@
 
 -(void)configUI{
     self.xChartLabelsArr = [NSMutableArray array];
+    self.yChartLabelsArr = [NSMutableArray array];
     _xAxis = [[YOXAxis alloc]init];
     _yAxis = [[YOYAxis alloc]init];
     _model = [[YOChartViewModel alloc]init];
@@ -58,20 +61,38 @@
     if (self.yAxis.dataArr.count == 0) {
         return;
     }
+    float sectionHeight = (self.frame.size.height - self.model.chartMarginTop - self.model.chartMarginBottom);
     
+    NSArray *arr = @[@1,@0];
+    NSArray *arrTitle = @[@"120",@"30"];
+    for(int i = 0; i < self.yAxis.dataArr.count; i++){
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.model.chartMarginLeft, self.yAxis.lableHeight)];
+        label.font = self.yAxis.lableFont;
+        label.textColor = self.yAxis.lableColor;
+        [label setTextAlignment:self.yAxis.alignment];
+        label.text = self.yAxis.dataArr[i];;
+        [self addSubview:label];
+        
+//        label.frame = (CGRect){0, sectionHeight * (1 - a) + _chartMarginTop - kYLabelHeight/2.0, _chartMarginLeft, kYLabelHeight};
+
+        [_yChartLabelsArr addObject:label];
+    }
 }
 
 ///画X轴
 -(void)drawXLabel{
     float xLabelWidth = 30;
+    int num = 1;
     if (self.xAxis.dataArr.count == 0) {
         return;
     }else if(self.xAxis.dataArr.count == 1){
         xLabelWidth = (self.frame.size.width - self.model.chartMarginLeft - self.model.chartMarginRight);
     }else{
-        xLabelWidth = (self.frame.size.width - self.model.chartMarginLeft - self.model.chartMarginRight) / (self.xAxis.dataArr.count - 1);
+        if (self.xAxis.type == YOXAxisTypeLeftToY) {
+            num = 0;
+        }
+        xLabelWidth = (self.frame.size.width - self.model.chartMarginLeft - self.model.chartMarginRight) / (self.xAxis.dataArr.count - num);
     }
-    
     float yLabel = self.frame.size.height - self.model.chartMarginBottom + self.xAxis.labelToX;
     
     for (int i = 0; i < self.xAxis.dataArr.count; i++) {
