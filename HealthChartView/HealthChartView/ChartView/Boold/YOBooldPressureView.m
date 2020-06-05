@@ -7,6 +7,7 @@
 //
 
 #import "YOBooldPressureView.h"
+#import "YOBooldPressureBarView.h"
 
 @interface YOBooldPressureView()
 
@@ -20,7 +21,7 @@
 
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        [self configUI];
+        [self initConfigUI];
     }
     return self;
 }
@@ -28,14 +29,15 @@
 
 -(instancetype)initWithCoder:(NSCoder *)coder{
     if (self = [super initWithCoder:coder]) {
-        [self configUI];
+        [self initConfigUI];
     }
     return self;
 }
 
 
--(void)configUI{
+-(void)initConfigUI{
     _barArr = [NSMutableArray array];
+    _number = 1;
 }
 
 
@@ -43,9 +45,33 @@
 ///刷新数据
 -(void)reload{
     [self cleanView:_barArr];
-    
+    [self refreshXY];
+    [self refreshBarView];
 }
 
+
+///刷新血压视图
+-(void)refreshBarView{
+    CGFloat chartHeight = self.frame.size.height - self.model.chartMarginTop - self.model.chartMarginBottom;
+    CGFloat oneBarWidth = (self.frame.size.width - self.model.chartMarginLeft - self.model.chartMarginRight) / _number;
+    for (int i = 0; i < self.dataArr.count; i++) {
+        YOBooldPressureBarView *bar = [[YOBooldPressureBarView alloc]initWithFrame:CGRectMake(i * oneBarWidth + self.model.chartMarginLeft, self.model.chartMarginTop, oneBarWidth, chartHeight)];
+        bar.tag = i + 100;
+        [bar drawBar:self.dataArr[i].Height low:self.dataArr[i].low];
+        [_barArr addObject:bar];
+        [self addSubview:bar];
+    }
+
+}
+
+
+
+#pragma mark - touch
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+}
+
+-(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+}
 
 
 @end

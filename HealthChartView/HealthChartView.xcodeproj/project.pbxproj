@@ -14,6 +14,17 @@
 		638EE247248A367D00978764 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 638EE246248A367D00978764 /* Assets.xcassets */; };
 		638EE24A248A367D00978764 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638EE248248A367D00978764 /* LaunchScreen.storyboard */; };
 		638EE24D248A367D00978764 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 638EE24C248A367D00978764 /* main.m */; };
+		638EE25F248A368C00978764 /* YOBaseChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 638EE254248A368C00978764 /* YOBaseChartView.m */; };
+		638EE260248A368C00978764 /* YOYAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 638EE25A248A368C00978764 /* YOYAxis.m */; };
+		638EE261248A368C00978764 /* YOXAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 638EE25B248A368C00978764 /* YOXAxis.m */; };
+		638EE262248A368C00978764 /* YOChartViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 638EE25E248A368C00978764 /* YOChartViewModel.m */; };
+		638EE268248A38E200978764 /* YOBooldPressureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 638EE267248A38E200978764 /* YOBooldPressureView.m */; };
+		638EE26C248A3CE600978764 /* YOBooldPressureBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 638EE26B248A3CE600978764 /* YOBooldPressureBarView.m */; };
+		638EE270248A490000978764 /* YOBPValueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 638EE26F248A490000978764 /* YOBPValueModel.m */; };
+		638EE275248A4B8400978764 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638EE273248A4B8400978764 /* MainViewController.m */; };
+		638EE276248A4B8400978764 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638EE274248A4B8400978764 /* MainViewController.xib */; };
+		638EE27B248A4C9900978764 /* BooldPreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638EE279248A4C9900978764 /* BooldPreViewController.m */; };
+		638EE27C248A4C9900978764 /* BooldPreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638EE27A248A4C9900978764 /* BooldPreViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +40,26 @@
 		638EE249248A367D00978764 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		638EE24B248A367D00978764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		638EE24C248A367D00978764 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		638EE254248A368C00978764 /* YOBaseChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YOBaseChartView.m; sourceTree = "<group>"; };
+		638EE256248A368C00978764 /* YOBaseChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YOBaseChartView.h; sourceTree = "<group>"; };
+		638EE258248A368C00978764 /* YOYAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YOYAxis.h; sourceTree = "<group>"; };
+		638EE259248A368C00978764 /* YOXAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YOXAxis.h; sourceTree = "<group>"; };
+		638EE25A248A368C00978764 /* YOYAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YOYAxis.m; sourceTree = "<group>"; };
+		638EE25B248A368C00978764 /* YOXAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YOXAxis.m; sourceTree = "<group>"; };
+		638EE25D248A368C00978764 /* YOChartViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YOChartViewModel.h; sourceTree = "<group>"; };
+		638EE25E248A368C00978764 /* YOChartViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YOChartViewModel.m; sourceTree = "<group>"; };
+		638EE266248A38E200978764 /* YOBooldPressureView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YOBooldPressureView.h; sourceTree = "<group>"; };
+		638EE267248A38E200978764 /* YOBooldPressureView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YOBooldPressureView.m; sourceTree = "<group>"; };
+		638EE26A248A3CE600978764 /* YOBooldPressureBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YOBooldPressureBarView.h; sourceTree = "<group>"; };
+		638EE26B248A3CE600978764 /* YOBooldPressureBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YOBooldPressureBarView.m; sourceTree = "<group>"; };
+		638EE26E248A490000978764 /* YOBPValueModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YOBPValueModel.h; sourceTree = "<group>"; };
+		638EE26F248A490000978764 /* YOBPValueModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YOBPValueModel.m; sourceTree = "<group>"; };
+		638EE272248A4B8400978764 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		638EE273248A4B8400978764 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		638EE274248A4B8400978764 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		638EE278248A4C9900978764 /* BooldPreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BooldPreViewController.h; sourceTree = "<group>"; };
+		638EE279248A4C9900978764 /* BooldPreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BooldPreViewController.m; sourceTree = "<group>"; };
+		638EE27A248A4C9900978764 /* BooldPreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BooldPreViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +92,8 @@
 		638EE239248A367800978764 /* HealthChartView */ = {
 			isa = PBXGroup;
 			children = (
+				638EE271248A4B6700978764 /* mian */,
+				638EE253248A368C00978764 /* ChartView */,
 				638EE23A248A367800978764 /* AppDelegate.h */,
 				638EE23B248A367800978764 /* AppDelegate.m */,
 				638EE23D248A367800978764 /* SceneDelegate.h */,
@@ -74,6 +107,96 @@
 				638EE24C248A367D00978764 /* main.m */,
 			);
 			path = HealthChartView;
+			sourceTree = "<group>";
+		};
+		638EE253248A368C00978764 /* ChartView */ = {
+			isa = PBXGroup;
+			children = (
+				638EE27D248A511B00978764 /* Base */,
+				638EE255248A368C00978764 /* Boold */,
+			);
+			path = ChartView;
+			sourceTree = "<group>";
+		};
+		638EE255248A368C00978764 /* Boold */ = {
+			isa = PBXGroup;
+			children = (
+				638EE26D248A48D800978764 /* model */,
+				638EE269248A3CAE00978764 /* view */,
+				638EE266248A38E200978764 /* YOBooldPressureView.h */,
+				638EE267248A38E200978764 /* YOBooldPressureView.m */,
+			);
+			path = Boold;
+			sourceTree = "<group>";
+		};
+		638EE257248A368C00978764 /* Axis */ = {
+			isa = PBXGroup;
+			children = (
+				638EE259248A368C00978764 /* YOXAxis.h */,
+				638EE25B248A368C00978764 /* YOXAxis.m */,
+				638EE258248A368C00978764 /* YOYAxis.h */,
+				638EE25A248A368C00978764 /* YOYAxis.m */,
+			);
+			path = Axis;
+			sourceTree = "<group>";
+		};
+		638EE25C248A368C00978764 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				638EE25D248A368C00978764 /* YOChartViewModel.h */,
+				638EE25E248A368C00978764 /* YOChartViewModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		638EE269248A3CAE00978764 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				638EE26A248A3CE600978764 /* YOBooldPressureBarView.h */,
+				638EE26B248A3CE600978764 /* YOBooldPressureBarView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		638EE26D248A48D800978764 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				638EE26E248A490000978764 /* YOBPValueModel.h */,
+				638EE26F248A490000978764 /* YOBPValueModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		638EE271248A4B6700978764 /* mian */ = {
+			isa = PBXGroup;
+			children = (
+				638EE277248A4C7E00978764 /* BooldPreusee */,
+				638EE272248A4B8400978764 /* MainViewController.h */,
+				638EE273248A4B8400978764 /* MainViewController.m */,
+				638EE274248A4B8400978764 /* MainViewController.xib */,
+			);
+			path = mian;
+			sourceTree = "<group>";
+		};
+		638EE277248A4C7E00978764 /* BooldPreusee */ = {
+			isa = PBXGroup;
+			children = (
+				638EE278248A4C9900978764 /* BooldPreViewController.h */,
+				638EE279248A4C9900978764 /* BooldPreViewController.m */,
+				638EE27A248A4C9900978764 /* BooldPreViewController.xib */,
+			);
+			path = BooldPreusee;
+			sourceTree = "<group>";
+		};
+		638EE27D248A511B00978764 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				638EE25C248A368C00978764 /* model */,
+				638EE257248A368C00978764 /* Axis */,
+				638EE256248A368C00978764 /* YOBaseChartView.h */,
+				638EE254248A368C00978764 /* YOBaseChartView.m */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +259,8 @@
 				638EE24A248A367D00978764 /* LaunchScreen.storyboard in Resources */,
 				638EE247248A367D00978764 /* Assets.xcassets in Resources */,
 				638EE245248A367800978764 /* Main.storyboard in Resources */,
+				638EE27C248A4C9900978764 /* BooldPreViewController.xib in Resources */,
+				638EE276248A4B8400978764 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,7 +271,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				638EE25F248A368C00978764 /* YOBaseChartView.m in Sources */,
+				638EE268248A38E200978764 /* YOBooldPressureView.m in Sources */,
 				638EE242248A367800978764 /* ViewController.m in Sources */,
+				638EE261248A368C00978764 /* YOXAxis.m in Sources */,
+				638EE262248A368C00978764 /* YOChartViewModel.m in Sources */,
+				638EE270248A490000978764 /* YOBPValueModel.m in Sources */,
+				638EE260248A368C00978764 /* YOYAxis.m in Sources */,
+				638EE27B248A4C9900978764 /* BooldPreViewController.m in Sources */,
+				638EE275248A4B8400978764 /* MainViewController.m in Sources */,
+				638EE26C248A3CE600978764 /* YOBooldPressureBarView.m in Sources */,
 				638EE23C248A367800978764 /* AppDelegate.m in Sources */,
 				638EE24D248A367D00978764 /* main.m in Sources */,
 				638EE23F248A367800978764 /* SceneDelegate.m in Sources */,
@@ -290,7 +424,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D63XASFCZU;
 				INFOPLIST_FILE = HealthChartView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +442,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D63XASFCZU;
 				INFOPLIST_FILE = HealthChartView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
