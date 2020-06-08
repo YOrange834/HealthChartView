@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///X轴的坐标内容
 @property (strong, nonatomic) NSArray *dataArr;
 
-///各个刻度之间的比例，不传则均分； 格式为字符串 @[@"120",@"80",@"30"];
+///各个刻度之间的比例，不传则均分； 格式为字符串 @[@"30",@"80",@"120"];  刻度必须升序 刻度必须升序 刻度必须升序
 @property (strong, nonatomic) NSArray *rateArr;
 
 ///字体大小 默认14

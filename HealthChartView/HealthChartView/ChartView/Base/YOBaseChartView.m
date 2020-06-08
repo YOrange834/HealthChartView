@@ -64,7 +64,14 @@
     float sectionHeight = (self.frame.size.height - self.model.chartMarginTop - self.model.chartMarginBottom);
     
     NSArray *arr = @[@1,@0];
-    NSArray *arrTitle = @[@"120",@"30"];
+    
+    ///0 是均分
+    int type = 0;
+    if (self.yAxis.rateArr.count != 0) {
+        NSAssert(self.yAxis.rateArr.count == self.yAxis.dataArr.count, @"内容数组和刻度数组长度要一致");
+    }
+    
+    
     for(int i = 0; i < self.yAxis.dataArr.count; i++){
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.model.chartMarginLeft, self.yAxis.lableHeight)];
         label.font = self.yAxis.lableFont;
@@ -72,6 +79,10 @@
         [label setTextAlignment:self.yAxis.alignment];
         label.text = self.yAxis.dataArr[i];;
         [self addSubview:label];
+        
+        if (self.yAxis.rateArr.count > 0) {
+            
+        }
         
 //        label.frame = (CGRect){0, sectionHeight * (1 - a) + _chartMarginTop - kYLabelHeight/2.0, _chartMarginLeft, kYLabelHeight};
 
