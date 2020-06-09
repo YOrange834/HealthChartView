@@ -57,35 +57,34 @@
 
 #pragma mark - X轴与 Y轴
 ///画Y轴
--(void)drawYAxis{
+-(void)drawYLabel{
     if (self.yAxis.dataArr.count == 0) {
         return;
     }
     float sectionHeight = (self.frame.size.height - self.model.chartMarginTop - self.model.chartMarginBottom);
-    
-    NSArray *arr = @[@1,@0];
-    
-    ///0 是均分
-    int type = 0;
+
     if (self.yAxis.rateArr.count != 0) {
         NSAssert(self.yAxis.rateArr.count == self.yAxis.dataArr.count, @"内容数组和刻度数组长度要一致");
     }
     
-    
+    //均分
+    BOOL isAvg = YES;
+    if(self.yAxis.rateArr.count != 0){
+        isAvg = NO;
+    }
     for(int i = 0; i < self.yAxis.dataArr.count; i++){
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.model.chartMarginLeft, self.yAxis.lableHeight)];
+        float y = self.model.chartMarginTop - self.yAxis.lableHeight / 2;
+        if (isAvg) {
+            y = y + sectionHeight - sectionHeight / self.yAxis.dataArr.count * i;
+        }else{
+            y = y + sectionHeight - sectionHeight / ([self.yAxis.rateArr.lastObject floatValue] - [self.yAxis.rateArr.firstObject floatValue]) * ([self.yAxis.rateArr[i] floatValue] - [self.yAxis.rateArr.firstObject floatValue]);
+        }
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, y, self.model.chartMarginLeft, self.yAxis.lableHeight)];
         label.font = self.yAxis.lableFont;
         label.textColor = self.yAxis.lableColor;
         [label setTextAlignment:self.yAxis.alignment];
         label.text = self.yAxis.dataArr[i];;
         [self addSubview:label];
-        
-        if (self.yAxis.rateArr.count > 0) {
-            
-        }
-        
-//        label.frame = (CGRect){0, sectionHeight * (1 - a) + _chartMarginTop - kYLabelHeight/2.0, _chartMarginLeft, kYLabelHeight};
-
         [_yChartLabelsArr addObject:label];
     }
 }
@@ -177,6 +176,7 @@
     [self cleanView:_xChartLabelsArr];
     
     [self drawXLabel];
+    [self drawYLabel];
     [self drawAxsiLine];
 }
 

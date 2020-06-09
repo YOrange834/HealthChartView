@@ -28,6 +28,8 @@
     bdView.xAxis.dataArr = @[@"星期一",@"星期二",@"星期三",@"星期四",@"星期五",@"星期六",@"星期天"];
     bdView.xAxis.type = YOXAxisTypeLeftToY;
     
+    bdView.yAxis.dataArr = @[@"30",@"180"];
+    
     NSMutableArray *arr = [NSMutableArray array];
     for (int i = 0; i < 20; i++) {
         YOBPValueModel *model = [YOBPValueModel new];
