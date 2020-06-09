@@ -22,8 +22,7 @@
 ///y轴刻度线
 @property (strong, nonatomic) CAShapeLayer * chartYAxisLine;
 
-///选择的刻度线
-@property (strong, nonatomic) UIView *lineView;
+
 
 @end
 
@@ -52,6 +51,7 @@
     _xAxis = [[YOXAxis alloc]init];
     _yAxis = [[YOYAxis alloc]init];
     _model = [[YOChartViewModel alloc]init];
+    _canSilder = NO;
 }
 
 

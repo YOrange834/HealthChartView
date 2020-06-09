@@ -25,6 +25,16 @@ NS_ASSUME_NONNULL_BEGIN
 ///界面相关间距等设置
 @property (strong, nonatomic) YOChartViewModel *model;
 
+///是否能滑动展示详细参数,默认为NO
+@property (assign, nonatomic) BOOL canSilder;
+
+///详情参数视图
+@property (strong, nonatomic) UIView *detailView;
+
+///选择的刻度线
+@property (strong, nonatomic) UIView *lineView;
+
+
 ///画X轴的刻度
 -(void)drawXLabel;
 

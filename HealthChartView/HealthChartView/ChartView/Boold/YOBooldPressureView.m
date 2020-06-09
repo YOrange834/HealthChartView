@@ -44,6 +44,9 @@
 
 ///刷新数据
 -(void)reload{
+    NSAssert(self.canSilder && self.detailView, @"能滑动的情况下，需要要有详情视图");
+    self.userInteractionEnabled = self.canSilder; //是否响应滑动事件
+    
     [self cleanView:_barArr];
     [self refreshXY];
     [self refreshBarView];
@@ -74,6 +77,13 @@
 -(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
 }
+
+-(void)show{
+    self.lineView.hidden = NO;
+    self.detailView.hidden = NO;
+    
+}
+
 
 
 @end
