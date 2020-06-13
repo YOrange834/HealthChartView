@@ -3,4 +3,4 @@
 
 #### 血压
 
-![IMG_AD9E8F629DE2-1](/Users/hrrmac/Downloads/IMG_AD9E8F629DE2-1.jpeg)
+![IMG_AD9E8F629DE2-1](https://github.com/YOrange834/HealthChartView/blob/master/source/IMG_AD9E8F629DE2-1.jpeg)
