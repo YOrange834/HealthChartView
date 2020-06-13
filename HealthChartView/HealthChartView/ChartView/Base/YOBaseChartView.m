@@ -22,7 +22,8 @@
 ///y轴刻度线
 @property (strong, nonatomic) CAShapeLayer * chartYAxisLine;
 
-
+///详情参数视图
+@property (strong, nonatomic) UIView *detailView;
 
 @end
 
@@ -52,6 +53,8 @@
     _yAxis = [[YOYAxis alloc]init];
     _model = [[YOChartViewModel alloc]init];
     _canSilder = NO;
+    _isTop = YES;
+    _moveFollowCenter = YES;
 }
 
 
@@ -61,7 +64,7 @@
     if (self.yAxis.dataArr.count == 0) {
         return;
     }
-    float sectionHeight = (self.frame.size.height - self.model.chartMarginTop - self.model.chartMarginBottom);
+    float sectionHeight = self.frame.size.height - self.model.chartMarginTop - self.model.chartMarginBottom;
 
     if (self.yAxis.rateArr.count != 0) {
         NSAssert(self.yAxis.rateArr.count == self.yAxis.dataArr.count, @"内容数组和刻度数组长度要一致");
@@ -69,15 +72,25 @@
     
     //均分
     BOOL isAvg = YES;
+    CGFloat onePoint; //一份的高度
+    
     if(self.yAxis.rateArr.count != 0){
         isAvg = NO;
+        onePoint = sectionHeight / ([self.yAxis.rateArr.lastObject floatValue] - [self.yAxis.rateArr.firstObject floatValue]);
+    }else{
+        if (self.yAxis.dataArr.count == 1) {
+            onePoint = sectionHeight;
+        }else{
+            onePoint = sectionHeight / (self.yAxis.dataArr.count - 1);
+        }
     }
+    
     for(int i = 0; i < self.yAxis.dataArr.count; i++){
         float y = self.model.chartMarginTop - self.yAxis.lableHeight / 2;
         if (isAvg) {
-            y = y + sectionHeight - sectionHeight / self.yAxis.dataArr.count * i;
+            y = y + sectionHeight - onePoint * i;
         }else{
-            y = y + sectionHeight - sectionHeight / ([self.yAxis.rateArr.lastObject floatValue] - [self.yAxis.rateArr.firstObject floatValue]) * ([self.yAxis.rateArr[i] floatValue] - [self.yAxis.rateArr.firstObject floatValue]);
+            y = y + sectionHeight - onePoint * ([self.yAxis.rateArr[i] floatValue] - [self.yAxis.rateArr.firstObject floatValue]);
         }
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, y, self.model.chartMarginLeft, self.yAxis.lableHeight)];
         label.font = self.yAxis.lableFont;
@@ -189,6 +202,21 @@
     }
 }
 
+///设置滑动线的层级顺序
+-(void)silderViewConfiger{
+    if (_isTop) {
+        [self bringSubviewToFront:self.lineView];
+    }
+    [self bringSubviewToFront:self.detailView];
+}
+
+
+-(void)detailViewConfiger:(UIView *)detailView{
+    self.detailView = detailView;
+    self.detailView.hidden = YES;
+    [self addSubview:self.detailView];
+}
+
 
 #pragma mark - 滑动选择相关的视图
 
@@ -201,6 +229,82 @@
     }
     return _lineView;
 }
+
+
+
+-(void)moveLine:(NSSet<UITouch *> *)touches{
+    UITouch *touch = [touches anyObject];
+    CGPoint point = [touch locationInView:self];
+    UIView *subview = [self hitTest:point withEvent:nil];
+    if (![subview isKindOfClass:self.viewClass]) {
+//        NSLog(@"选中的是哪个tag%ld",(long)subview.tag);
+        return;
+    }
+    
+    CGRect frame = subview.frame;
+    frame.origin.x += subview.frame.size.width / 2.0;
+    frame.size.width = 0.5;
+    frame.origin.y = 0;
+    frame.size.height += self.model.chartMarginTop;
+    self.lineView.frame = frame;
+    
+//    [self configData:(int)subview.tag];
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(yoBaseChartView:selectIndex:detailView:)]) {
+        [self.delegate yoBaseChartView:self selectIndex:subview.tag - 100 detailView:self.detailView];
+    }
+    
+    CGFloat x = point.x;
+    if (_moveFollowCenter) {
+        x = frame.origin.x;
+    }
+    
+    CGRect fr = self.detailView.frame;
+    if (x < self.detailView.frame.size.width / 2) {
+        fr.origin.x = 0;
+    }else if (x > self.frame.size.width - self.detailView.frame.size.width / 2){
+        fr.origin.x = self.frame.size.width - self.detailView.frame.size.width;
+    }else{
+        fr.origin.x = x - self.detailView.frame.size.width / 2;
+    }
+    self.detailView.frame = fr;
+    
+}
+
+
+
+#pragma mark - touch
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self show:YES];
+    [self moveLine:touches];
+}
+
+-(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self moveLine:touches];
+}
+
+
+-(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self moveLine:touches];
+    [self show:NO];
+}
+
+
+-(void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self show:NO];
+}
+
+
+-(void)show:(BOOL)isShow{
+    self.lineView.hidden = !isShow;
+    self.detailView.hidden = !isShow;
+    if(self.delegate && [self.delegate respondsToSelector:@selector(yoBaseChartView:isSilder:)]){
+        [self.delegate yoBaseChartView:self isSilder:isShow];
+    }
+    
+}
+
+
 
 
 @end

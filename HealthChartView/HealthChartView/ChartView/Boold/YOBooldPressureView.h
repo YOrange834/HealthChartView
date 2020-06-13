@@ -18,6 +18,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic) NSArray <YOBPValueModel *>*dataArr;
 
+///是否显示血压范围，默认显示（60-90 90-140）
+@property (assign, nonatomic) BOOL isNeedShowRange;
+
+///收缩压的背景颜色，低压
+@property (strong, nonatomic) UIColor *systoleColor;
+
+///舒张压的背景色
+@property (strong, nonatomic) UIColor *diastolicColor;
+
+
 -(void)reload;
 
 @end

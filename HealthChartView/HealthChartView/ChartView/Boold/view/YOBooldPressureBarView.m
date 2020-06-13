@@ -104,7 +104,7 @@
     CAGradientLayer *gradientLayer = [CAGradientLayer layer];
     gradientLayer.startPoint = CGPointMake(0.0,0.0);
     gradientLayer.endPoint = CGPointMake(0.0 ,1.0);
-    gradientLayer.frame = CGRectMake((_lineWidth - _pillarWidth) / 2.0 + 1 , (self.maxScale - heigh) * _oneUnit  + _pillarHeight, _pillarWidth - 2, (heigh - low) * _oneUnit - _pillarHeight);
+    gradientLayer.frame = CGRectMake((_lineWidth - _pillarWidth) / 2.0 + 1 , (self.maxScale - heigh) * _oneUnit  + _pillarHeight, _pillarWidth - 2, (heigh - low) * _oneUnit - _pillarHeight * 2);
     
     NSMutableArray *colors = [NSMutableArray array];
     for (int i = 0; i < self.colorArr.count; i++) {
