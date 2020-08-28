@@ -25,6 +25,13 @@
 		638EE276248A4B8400978764 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638EE274248A4B8400978764 /* MainViewController.xib */; };
 		638EE27B248A4C9900978764 /* BooldPreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638EE279248A4C9900978764 /* BooldPreViewController.m */; };
 		638EE27C248A4C9900978764 /* BooldPreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638EE27A248A4C9900978764 /* BooldPreViewController.xib */; };
+		63D8DFE624F8961F0096BFA7 /* ECGShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D8DFE324F8961F0096BFA7 /* ECGShareViewController.xib */; };
+		63D8DFE724F8961F0096BFA7 /* ECGShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D8DFE424F8961F0096BFA7 /* ECGShareViewController.m */; };
+		63D8DFF124F8962D0096BFA7 /* ECGScalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D8DFE924F8962D0096BFA7 /* ECGScalView.m */; };
+		63D8DFF224F8962D0096BFA7 /* ECGScalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D8DFEA24F8962D0096BFA7 /* ECGScalView.xib */; };
+		63D8DFF324F8962D0096BFA7 /* ECGGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D8DFED24F8962D0096BFA7 /* ECGGridView.m */; };
+		63D8DFF424F8962D0096BFA7 /* ECGShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D8DFEE24F8962D0096BFA7 /* ECGShareView.m */; };
+		63D8DFF724F899E20096BFA7 /* heart.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63D8DFF624F899E20096BFA7 /* heart.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +67,17 @@
 		638EE278248A4C9900978764 /* BooldPreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BooldPreViewController.h; sourceTree = "<group>"; };
 		638EE279248A4C9900978764 /* BooldPreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BooldPreViewController.m; sourceTree = "<group>"; };
 		638EE27A248A4C9900978764 /* BooldPreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BooldPreViewController.xib; sourceTree = "<group>"; };
+		63D8DFE324F8961F0096BFA7 /* ECGShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECGShareViewController.xib; sourceTree = "<group>"; };
+		63D8DFE424F8961F0096BFA7 /* ECGShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECGShareViewController.m; sourceTree = "<group>"; };
+		63D8DFE524F8961F0096BFA7 /* ECGShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECGShareViewController.h; sourceTree = "<group>"; };
+		63D8DFE924F8962D0096BFA7 /* ECGScalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECGScalView.m; sourceTree = "<group>"; };
+		63D8DFEA24F8962D0096BFA7 /* ECGScalView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECGScalView.xib; sourceTree = "<group>"; };
+		63D8DFEB24F8962D0096BFA7 /* ECGScalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECGScalView.h; sourceTree = "<group>"; };
+		63D8DFED24F8962D0096BFA7 /* ECGGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECGGridView.m; sourceTree = "<group>"; };
+		63D8DFEE24F8962D0096BFA7 /* ECGShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECGShareView.m; sourceTree = "<group>"; };
+		63D8DFEF24F8962D0096BFA7 /* ECGGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECGGridView.h; sourceTree = "<group>"; };
+		63D8DFF024F8962D0096BFA7 /* ECGShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECGShareView.h; sourceTree = "<group>"; };
+		63D8DFF624F899E20096BFA7 /* heart.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = heart.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +188,7 @@
 		638EE271248A4B6700978764 /* mian */ = {
 			isa = PBXGroup;
 			children = (
+				63D8DFE224F895E00096BFA7 /* ECG */,
 				638EE277248A4C7E00978764 /* BooldPreusee */,
 				638EE272248A4B8400978764 /* MainViewController.h */,
 				638EE273248A4B8400978764 /* MainViewController.m */,
@@ -197,6 +216,48 @@
 				638EE254248A368C00978764 /* YOBaseChartView.m */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		63D8DFE224F895E00096BFA7 /* ECG */ = {
+			isa = PBXGroup;
+			children = (
+				63D8DFF524F899CE0096BFA7 /* data */,
+				63D8DFEC24F8962D0096BFA7 /* layer */,
+				63D8DFE824F8962C0096BFA7 /* view */,
+				63D8DFE524F8961F0096BFA7 /* ECGShareViewController.h */,
+				63D8DFE424F8961F0096BFA7 /* ECGShareViewController.m */,
+				63D8DFE324F8961F0096BFA7 /* ECGShareViewController.xib */,
+			);
+			path = ECG;
+			sourceTree = "<group>";
+		};
+		63D8DFE824F8962C0096BFA7 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				63D8DFEB24F8962D0096BFA7 /* ECGScalView.h */,
+				63D8DFE924F8962D0096BFA7 /* ECGScalView.m */,
+				63D8DFEA24F8962D0096BFA7 /* ECGScalView.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		63D8DFEC24F8962D0096BFA7 /* layer */ = {
+			isa = PBXGroup;
+			children = (
+				63D8DFEF24F8962D0096BFA7 /* ECGGridView.h */,
+				63D8DFED24F8962D0096BFA7 /* ECGGridView.m */,
+				63D8DFF024F8962D0096BFA7 /* ECGShareView.h */,
+				63D8DFEE24F8962D0096BFA7 /* ECGShareView.m */,
+			);
+			path = layer;
+			sourceTree = "<group>";
+		};
+		63D8DFF524F899CE0096BFA7 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				63D8DFF624F899E20096BFA7 /* heart.plist */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +318,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				638EE24A248A367D00978764 /* LaunchScreen.storyboard in Resources */,
+				63D8DFF724F899E20096BFA7 /* heart.plist in Resources */,
 				638EE247248A367D00978764 /* Assets.xcassets in Resources */,
+				63D8DFE624F8961F0096BFA7 /* ECGShareViewController.xib in Resources */,
+				63D8DFF224F8962D0096BFA7 /* ECGScalView.xib in Resources */,
 				638EE245248A367800978764 /* Main.storyboard in Resources */,
 				638EE27C248A4C9900978764 /* BooldPreViewController.xib in Resources */,
 				638EE276248A4B8400978764 /* MainViewController.xib in Resources */,
@@ -271,18 +335,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63D8DFE724F8961F0096BFA7 /* ECGShareViewController.m in Sources */,
 				638EE25F248A368C00978764 /* YOBaseChartView.m in Sources */,
 				638EE268248A38E200978764 /* YOBooldPressureView.m in Sources */,
 				638EE242248A367800978764 /* ViewController.m in Sources */,
 				638EE261248A368C00978764 /* YOXAxis.m in Sources */,
 				638EE262248A368C00978764 /* YOChartViewModel.m in Sources */,
 				638EE270248A490000978764 /* YOBPValueModel.m in Sources */,
+				63D8DFF124F8962D0096BFA7 /* ECGScalView.m in Sources */,
+				63D8DFF324F8962D0096BFA7 /* ECGGridView.m in Sources */,
 				638EE260248A368C00978764 /* YOYAxis.m in Sources */,
 				638EE27B248A4C9900978764 /* BooldPreViewController.m in Sources */,
 				638EE275248A4B8400978764 /* MainViewController.m in Sources */,
 				638EE26C248A3CE600978764 /* YOBooldPressureBarView.m in Sources */,
 				638EE23C248A367800978764 /* AppDelegate.m in Sources */,
 				638EE24D248A367D00978764 /* main.m in Sources */,
+				63D8DFF424F8962D0096BFA7 /* ECGShareView.m in Sources */,
 				638EE23F248A367800978764 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

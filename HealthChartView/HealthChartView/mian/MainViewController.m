@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "BooldPreViewController.h"
+#import "ECGShareViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -20,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _arr = @[@"血压图"];
+    _arr = @[@"血压图",@"心电图报告"];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
@@ -43,7 +44,12 @@
     NSString *title = _arr[indexPath.row];
     if ([title isEqualToString:@"血压图"]) {
         [self.navigationController pushViewController:[BooldPreViewController new] animated:YES];
+        return;
     }
+    if ([title isEqualToString:@"心电图报告"]) {
+        [self.navigationController pushViewController:[ECGShareViewController new] animated:YES];
+    }
+    //
 }
 
 @end
