@@ -69,5 +69,7 @@ bdView.dataArr = arr;
 [bdView reload];
 ```
 
+#### 心电图
 
+![https://github.com/YOrange834/HealthChartView/blob/master/source/IMG_0012.JPG]()
 
