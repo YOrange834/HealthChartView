@@ -11,6 +11,14 @@
 
 ![IMG_AD9E8F629DE2-1](https://github.com/YOrange834/HealthChartView/blob/master/source/IMG_AD9E8F629DE2-1.jpeg)
 
+#### 心电图报告
+
+![ECG Report](https://github.com/YOrange834/HealthChartView/blob/master/source/IMG_0012.JPG)
+
+#### 实时心电图
+
+![ECG](https://github.com/YOrange834/HealthChartView/blob/master/source/Oct-16-2020%2009-57-46_q.gif)
+
 #### 使用方法
 
 #### 血压
@@ -70,9 +78,4 @@ bdView.dataArr = arr;
 [bdView reload];
 ```
 
-#### 心电图
-
-![ECG Report](https://github.com/YOrange834/HealthChartView/blob/master/source/IMG_0012.JPG)
-
-![ECG](https://github.com/YOrange834/HealthChartView/blob/master/source/Oct-16-2020%2009-57-46_q.gif)
 
