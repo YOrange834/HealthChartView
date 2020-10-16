@@ -74,3 +74,5 @@ bdView.dataArr = arr;
 
 ![ECG Report](https://github.com/YOrange834/HealthChartView/blob/master/source/IMG_0012.JPG)
 
+![ECG](https://github.com/YOrange834/HealthChartView/blob/master/source/Oct-16-2020%2009-57-46_q.gif)
+
