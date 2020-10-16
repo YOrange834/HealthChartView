@@ -32,6 +32,9 @@
 		63D8DFF324F8962D0096BFA7 /* ECGGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D8DFED24F8962D0096BFA7 /* ECGGridView.m */; };
 		63D8DFF424F8962D0096BFA7 /* ECGShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D8DFEE24F8962D0096BFA7 /* ECGShareView.m */; };
 		63D8DFF724F899E20096BFA7 /* heart.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63D8DFF624F899E20096BFA7 /* heart.plist */; };
+		63E6475B2539315300CCA040 /* ECGTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E647592539315300CCA040 /* ECGTestViewController.m */; };
+		63E6475C2539315300CCA040 /* ECGTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E6475A2539315300CCA040 /* ECGTestViewController.xib */; };
+		63E647612539316700CCA040 /* ECGChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E647602539316700CCA040 /* ECGChartView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +81,11 @@
 		63D8DFEF24F8962D0096BFA7 /* ECGGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECGGridView.h; sourceTree = "<group>"; };
 		63D8DFF024F8962D0096BFA7 /* ECGShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECGShareView.h; sourceTree = "<group>"; };
 		63D8DFF624F899E20096BFA7 /* heart.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = heart.plist; sourceTree = "<group>"; };
+		63E647582539315300CCA040 /* ECGTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECGTestViewController.h; sourceTree = "<group>"; };
+		63E647592539315300CCA040 /* ECGTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECGTestViewController.m; sourceTree = "<group>"; };
+		63E6475A2539315300CCA040 /* ECGTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ECGTestViewController.xib; sourceTree = "<group>"; };
+		63E6475F2539316700CCA040 /* ECGChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECGChartView.h; sourceTree = "<group>"; };
+		63E647602539316700CCA040 /* ECGChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECGChartView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,7 +196,8 @@
 		638EE271248A4B6700978764 /* mian */ = {
 			isa = PBXGroup;
 			children = (
-				63D8DFE224F895E00096BFA7 /* ECG */,
+				63E647572539313A00CCA040 /* ECG */,
+				63D8DFE224F895E00096BFA7 /* ECGReport */,
 				638EE277248A4C7E00978764 /* BooldPreusee */,
 				638EE272248A4B8400978764 /* MainViewController.h */,
 				638EE273248A4B8400978764 /* MainViewController.m */,
@@ -218,7 +227,7 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		63D8DFE224F895E00096BFA7 /* ECG */ = {
+		63D8DFE224F895E00096BFA7 /* ECGReport */ = {
 			isa = PBXGroup;
 			children = (
 				63D8DFF524F899CE0096BFA7 /* data */,
@@ -228,7 +237,7 @@
 				63D8DFE424F8961F0096BFA7 /* ECGShareViewController.m */,
 				63D8DFE324F8961F0096BFA7 /* ECGShareViewController.xib */,
 			);
-			path = ECG;
+			path = ECGReport;
 			sourceTree = "<group>";
 		};
 		63D8DFE824F8962C0096BFA7 /* view */ = {
@@ -258,6 +267,26 @@
 				63D8DFF624F899E20096BFA7 /* heart.plist */,
 			);
 			path = data;
+			sourceTree = "<group>";
+		};
+		63E647572539313A00CCA040 /* ECG */ = {
+			isa = PBXGroup;
+			children = (
+				63E6475E2539315B00CCA040 /* chartView */,
+				63E647582539315300CCA040 /* ECGTestViewController.h */,
+				63E647592539315300CCA040 /* ECGTestViewController.m */,
+				63E6475A2539315300CCA040 /* ECGTestViewController.xib */,
+			);
+			path = ECG;
+			sourceTree = "<group>";
+		};
+		63E6475E2539315B00CCA040 /* chartView */ = {
+			isa = PBXGroup;
+			children = (
+				63E6475F2539316700CCA040 /* ECGChartView.h */,
+				63E647602539316700CCA040 /* ECGChartView.m */,
+			);
+			path = chartView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +351,7 @@
 				638EE247248A367D00978764 /* Assets.xcassets in Resources */,
 				63D8DFE624F8961F0096BFA7 /* ECGShareViewController.xib in Resources */,
 				63D8DFF224F8962D0096BFA7 /* ECGScalView.xib in Resources */,
+				63E6475C2539315300CCA040 /* ECGTestViewController.xib in Resources */,
 				638EE245248A367800978764 /* Main.storyboard in Resources */,
 				638EE27C248A4C9900978764 /* BooldPreViewController.xib in Resources */,
 				638EE276248A4B8400978764 /* MainViewController.xib in Resources */,
@@ -335,6 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63E6475B2539315300CCA040 /* ECGTestViewController.m in Sources */,
 				63D8DFE724F8961F0096BFA7 /* ECGShareViewController.m in Sources */,
 				638EE25F248A368C00978764 /* YOBaseChartView.m in Sources */,
 				638EE268248A38E200978764 /* YOBooldPressureView.m in Sources */,
@@ -345,6 +376,7 @@
 				63D8DFF124F8962D0096BFA7 /* ECGScalView.m in Sources */,
 				63D8DFF324F8962D0096BFA7 /* ECGGridView.m in Sources */,
 				638EE260248A368C00978764 /* YOYAxis.m in Sources */,
+				63E647612539316700CCA040 /* ECGChartView.m in Sources */,
 				638EE27B248A4C9900978764 /* BooldPreViewController.m in Sources */,
 				638EE275248A4B8400978764 /* MainViewController.m in Sources */,
 				638EE26C248A3CE600978764 /* YOBooldPressureBarView.m in Sources */,

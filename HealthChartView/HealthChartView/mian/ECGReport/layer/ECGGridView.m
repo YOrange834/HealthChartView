@@ -72,7 +72,6 @@
     }
     
    
-
     {
         [progressline setLineWidth:0.0];
         [progressline setLineCapStyle:kCGLineCapSquare];
