@@ -3,10 +3,10 @@
 
 #### 截图
 
-#### ![未标题-1](/Users/mac/Desktop/HealthChartView/res/未标题-1.jpg)
+#### ![预览图](https://github.com/YOrange834/HealthChartView/blob/master/res/%E6%9C%AA%E6%A0%87%E9%A2%98-1.jpg)
 
 #### 实时心电图
 
-![Untitled](/Users/mac/Desktop/HealthChartView/res/Untitled.gif)
+![实时心电图](https://github.com/YOrange834/HealthChartView/blob/master/res/Untitled.gif)
 
 
