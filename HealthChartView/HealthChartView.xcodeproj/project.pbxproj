@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		047A391D2597167C008B6E5B /* BooldOxyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A391B2597167C008B6E5B /* BooldOxyViewController.m */; };
+		047A391E2597167C008B6E5B /* BooldOxyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047A391C2597167C008B6E5B /* BooldOxyViewController.xib */; };
+		047A392B259717BE008B6E5B /* OxyChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A392A259717BE008B6E5B /* OxyChartView.m */; };
+		047A39302597187D008B6E5B /* OxyLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A392F2597187D008B6E5B /* OxyLineView.m */; };
 		638EE23C248A367800978764 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 638EE23B248A367800978764 /* AppDelegate.m */; };
 		638EE23F248A367800978764 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 638EE23E248A367800978764 /* SceneDelegate.m */; };
 		638EE242248A367800978764 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638EE241248A367800978764 /* ViewController.m */; };
@@ -38,6 +42,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		047A391A2597167C008B6E5B /* BooldOxyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BooldOxyViewController.h; sourceTree = "<group>"; };
+		047A391B2597167C008B6E5B /* BooldOxyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BooldOxyViewController.m; sourceTree = "<group>"; };
+		047A391C2597167C008B6E5B /* BooldOxyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BooldOxyViewController.xib; sourceTree = "<group>"; };
+		047A3929259717BE008B6E5B /* OxyChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OxyChartView.h; sourceTree = "<group>"; };
+		047A392A259717BE008B6E5B /* OxyChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OxyChartView.m; sourceTree = "<group>"; };
+		047A392E2597187D008B6E5B /* OxyLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OxyLineView.h; sourceTree = "<group>"; };
+		047A392F2597187D008B6E5B /* OxyLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OxyLineView.m; sourceTree = "<group>"; };
 		638EE237248A367800978764 /* HealthChartView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthChartView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		638EE23A248A367800978764 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		638EE23B248A367800978764 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -99,6 +110,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		047A39192597165D008B6E5B /* BooldOxy */ = {
+			isa = PBXGroup;
+			children = (
+				047A391A2597167C008B6E5B /* BooldOxyViewController.h */,
+				047A391B2597167C008B6E5B /* BooldOxyViewController.m */,
+				047A391C2597167C008B6E5B /* BooldOxyViewController.xib */,
+			);
+			path = BooldOxy;
+			sourceTree = "<group>";
+		};
+		047A392725971796008B6E5B /* Oxy */ = {
+			isa = PBXGroup;
+			children = (
+				047A392D25971868008B6E5B /* view */,
+				047A3929259717BE008B6E5B /* OxyChartView.h */,
+				047A392A259717BE008B6E5B /* OxyChartView.m */,
+			);
+			path = Oxy;
+			sourceTree = "<group>";
+		};
+		047A392D25971868008B6E5B /* view */ = {
+			isa = PBXGroup;
+			children = (
+				047A392E2597187D008B6E5B /* OxyLineView.h */,
+				047A392F2597187D008B6E5B /* OxyLineView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		638EE22E248A367800978764 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +178,7 @@
 		638EE253248A368C00978764 /* ChartView */ = {
 			isa = PBXGroup;
 			children = (
+				047A392725971796008B6E5B /* Oxy */,
 				638EE27D248A511B00978764 /* Base */,
 				638EE255248A368C00978764 /* Boold */,
 			);
@@ -196,6 +237,7 @@
 		638EE271248A4B6700978764 /* mian */ = {
 			isa = PBXGroup;
 			children = (
+				047A39192597165D008B6E5B /* BooldOxy */,
 				63E647572539313A00CCA040 /* ECG */,
 				63D8DFE224F895E00096BFA7 /* ECGReport */,
 				638EE277248A4C7E00978764 /* BooldPreusee */,
@@ -354,6 +396,7 @@
 				63E6475C2539315300CCA040 /* ECGTestViewController.xib in Resources */,
 				638EE245248A367800978764 /* Main.storyboard in Resources */,
 				638EE27C248A4C9900978764 /* BooldPreViewController.xib in Resources */,
+				047A391E2597167C008B6E5B /* BooldOxyViewController.xib in Resources */,
 				638EE276248A4B8400978764 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,9 +411,11 @@
 				63E6475B2539315300CCA040 /* ECGTestViewController.m in Sources */,
 				63D8DFE724F8961F0096BFA7 /* ECGShareViewController.m in Sources */,
 				638EE25F248A368C00978764 /* YOBaseChartView.m in Sources */,
+				047A392B259717BE008B6E5B /* OxyChartView.m in Sources */,
 				638EE268248A38E200978764 /* YOBooldPressureView.m in Sources */,
 				638EE242248A367800978764 /* ViewController.m in Sources */,
 				638EE261248A368C00978764 /* YOXAxis.m in Sources */,
+				047A391D2597167C008B6E5B /* BooldOxyViewController.m in Sources */,
 				638EE262248A368C00978764 /* YOChartViewModel.m in Sources */,
 				638EE270248A490000978764 /* YOBPValueModel.m in Sources */,
 				63D8DFF124F8962D0096BFA7 /* ECGScalView.m in Sources */,
@@ -382,6 +427,7 @@
 				638EE26C248A3CE600978764 /* YOBooldPressureBarView.m in Sources */,
 				638EE23C248A367800978764 /* AppDelegate.m in Sources */,
 				638EE24D248A367D00978764 /* main.m in Sources */,
+				047A39302597187D008B6E5B /* OxyLineView.m in Sources */,
 				63D8DFF424F8962D0096BFA7 /* ECGShareView.m in Sources */,
 				638EE23F248A367800978764 /* SceneDelegate.m in Sources */,
 			);
@@ -533,7 +579,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.horange.cn.HealthChartView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -551,7 +597,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.horange.cn.HealthChartView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

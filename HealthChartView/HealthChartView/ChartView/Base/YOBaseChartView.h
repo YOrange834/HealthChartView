@@ -74,6 +74,9 @@ NS_ASSUME_NONNULL_BEGIN
 ///默认YES 详细参数视图的移动方式，是否跟随柱体中间移动，NO为跟随手势移动
 @property (assign, nonatomic) BOOL moveFollowCenter;
 
+///X轴等份，当moveFollowCenter = no 时候，次数据为必传数据，次数据用于算出当前的index
+@property (assign, nonatomic) int copies;
+
 ///滑动视图的层级配置
 -(void)silderViewConfiger;
 

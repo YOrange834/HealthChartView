@@ -55,6 +55,7 @@
     _canSilder = NO;
     _isTop = YES;
     _moveFollowCenter = YES;
+    _copies = 42;
 }
 
 
@@ -241,21 +242,46 @@
         return;
     }
     
-    CGRect frame = subview.frame;
-    frame.origin.x += subview.frame.size.width / 2.0;
-    frame.size.width = 0.5;
-    frame.origin.y = 0;
-    frame.size.height += self.model.chartMarginTop;
-    self.lineView.frame = frame;
-    
-//    [self configData:(int)subview.tag];
-    
-    if (self.delegate && [self.delegate respondsToSelector:@selector(yoBaseChartView:selectIndex:detailView:)]) {
-        [self.delegate yoBaseChartView:self selectIndex:subview.tag - 100 detailView:self.detailView];
-    }
     
     CGFloat x = point.x;
-    if (_moveFollowCenter) {
+    if (_moveFollowCenter) { //柱体中间
+        CGRect frame = subview.frame;
+        frame.origin.x += subview.frame.size.width / 2.0;
+        frame.size.width = 0.5;
+        frame.origin.y = 0;
+        frame.size.height += self.model.chartMarginTop;
+        self.lineView.frame = frame;
+        
+        if (self.delegate && [self.delegate respondsToSelector:@selector(yoBaseChartView:selectIndex:detailView:)]) {
+            [self.delegate yoBaseChartView:self selectIndex:subview.tag - 100 detailView:self.detailView];
+        }
+        
+        x = frame.origin.x;
+    }else{  //跟随手指一动
+        CGRect frame = self.lineView.frame;
+        if(point.x < self.model.chartMarginLeft){
+            frame.origin.x = self.model.chartMarginLeft;
+        }else if(point.x > self.frame.size.width - self.model.chartMarginRight){
+            frame.origin.x = self.frame.size.width - self.model.chartMarginRight;
+        }else{
+            frame.origin.x = point.x;
+        }
+        self.lineView.frame = frame;
+        
+        float allWidth = self.frame.size.width - self.model.chartMarginLeft - self.model.chartMarginRight;
+        float one = allWidth / _copies;
+        int index = 0;
+        if (x <= self.model.chartMarginLeft) {
+            index = 0;
+        }else if (x >= self.frame.size.width - self.model.chartMarginRight){
+            index = _copies - 1;
+        }else{
+            index = (int)(x - self.model.chartMarginLeft + one / 2.0) / one;
+        }
+        if (self.delegate && [self.delegate respondsToSelector:@selector(yoBaseChartView:selectIndex:detailView:)]) {
+            [self.delegate yoBaseChartView:self selectIndex:index detailView:self.detailView];
+        }
+        
         x = frame.origin.x;
     }
     
