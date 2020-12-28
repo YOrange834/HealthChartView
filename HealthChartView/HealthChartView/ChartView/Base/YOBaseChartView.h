@@ -83,6 +83,8 @@ NS_ASSUME_NONNULL_BEGIN
 ///配置详情视图
 -(void)detailViewConfiger:(UIView *)detailView;
 
+///跟随手指移动的偏移量
+-(void)nowOffset:(CGFloat)offset detailView:(UIView *)detailView;
 @end
 
 NS_ASSUME_NONNULL_END

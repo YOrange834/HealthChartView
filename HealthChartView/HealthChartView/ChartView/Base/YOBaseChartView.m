@@ -241,49 +241,31 @@
 //        NSLog(@"选中的是哪个tag%ld",(long)subview.tag);
         return;
     }
-    
+
+    if (_moveFollowCenter) { //柱体中间
+        [self followCenter:point subView:subview];
+    }else{  //跟随手指一动
+        [self followTouch:point subView:subview];
+    }
+}
+
+
+///跟随柱体的中间，即只会中一个柱体的中线切换到另外一个柱体的中线
+-(void)followCenter:(CGPoint)point subView:(UIView *)subview{
     
     CGFloat x = point.x;
-    if (_moveFollowCenter) { //柱体中间
-        CGRect frame = subview.frame;
-        frame.origin.x += subview.frame.size.width / 2.0;
-        frame.size.width = 0.5;
-        frame.origin.y = 0;
-        frame.size.height += self.model.chartMarginTop;
-        self.lineView.frame = frame;
-        
-        if (self.delegate && [self.delegate respondsToSelector:@selector(yoBaseChartView:selectIndex:detailView:)]) {
-            [self.delegate yoBaseChartView:self selectIndex:subview.tag - 100 detailView:self.detailView];
-        }
-        
-        x = frame.origin.x;
-    }else{  //跟随手指一动
-        CGRect frame = self.lineView.frame;
-        if(point.x < self.model.chartMarginLeft){
-            frame.origin.x = self.model.chartMarginLeft;
-        }else if(point.x > self.frame.size.width - self.model.chartMarginRight){
-            frame.origin.x = self.frame.size.width - self.model.chartMarginRight;
-        }else{
-            frame.origin.x = point.x;
-        }
-        self.lineView.frame = frame;
-        
-        float allWidth = self.frame.size.width - self.model.chartMarginLeft - self.model.chartMarginRight;
-        float one = allWidth / _copies;
-        int index = 0;
-        if (x <= self.model.chartMarginLeft) {
-            index = 0;
-        }else if (x >= self.frame.size.width - self.model.chartMarginRight){
-            index = _copies - 1;
-        }else{
-            index = (int)(x - self.model.chartMarginLeft + one / 2.0) / one;
-        }
-        if (self.delegate && [self.delegate respondsToSelector:@selector(yoBaseChartView:selectIndex:detailView:)]) {
-            [self.delegate yoBaseChartView:self selectIndex:index detailView:self.detailView];
-        }
-        
-        x = frame.origin.x;
+    CGRect frame = subview.frame;
+    frame.origin.x += subview.frame.size.width / 2.0;
+    frame.size.width = 0.5;
+    frame.origin.y = 0;
+    frame.size.height += self.model.chartMarginTop;
+    self.lineView.frame = frame;
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(yoBaseChartView:selectIndex:detailView:)]) {
+        [self.delegate yoBaseChartView:self selectIndex:subview.tag - 100 detailView:self.detailView];
     }
+    
+    x = frame.origin.x;
     
     CGRect fr = self.detailView.frame;
     if (x < self.detailView.frame.size.width / 2) {
@@ -297,6 +279,55 @@
     
 }
 
+
+-(void)followTouch:(CGPoint)point subView:(UIView *)subview{
+    CGFloat x = point.x;
+    
+    CGRect frame = self.lineView.frame;
+    if(point.x < self.model.chartMarginLeft){
+        frame.origin.x = self.model.chartMarginLeft;
+    }else if(point.x > self.frame.size.width - self.model.chartMarginRight){
+        frame.origin.x = self.frame.size.width - self.model.chartMarginRight;
+    }else{
+        frame.origin.x = point.x;
+    }
+    self.lineView.frame = frame;
+    
+    float allWidth = self.frame.size.width - self.model.chartMarginLeft - self.model.chartMarginRight;
+    float one = allWidth / _copies;
+    int index = 0;
+    if (x <= self.model.chartMarginLeft) {
+        index = 0;
+    }else if (x >= self.frame.size.width - self.model.chartMarginRight){
+        index = _copies - 1;
+    }else{
+        index = (int)(x - self.model.chartMarginLeft + one / 2.0) / one;
+    }
+    if (self.delegate && [self.delegate respondsToSelector:@selector(yoBaseChartView:selectIndex:detailView:)]) {
+        [self.delegate yoBaseChartView:self selectIndex:index detailView:self.detailView];
+    }
+    
+    x = frame.origin.x;
+    
+    CGRect fr = self.detailView.frame;
+    if (x < self.detailView.frame.size.width / 2) {
+        fr.origin.x = 0;
+    }else if (x > self.frame.size.width - self.detailView.frame.size.width / 2){
+        fr.origin.x = self.frame.size.width - self.detailView.frame.size.width;
+    }else{
+        fr.origin.x = x - self.detailView.frame.size.width / 2;
+    }
+    self.detailView.frame = fr;
+    
+    [self nowOffset:point.x - self.model.chartMarginLeft detailView:self.detailView];
+
+    
+}
+
+///滑动现在的偏移量:(子类可以重新次方法)
+-(void)nowOffset:(CGFloat)offset detailView:(UIView *)detailView{
+    
+}
 
 
 #pragma mark - touch

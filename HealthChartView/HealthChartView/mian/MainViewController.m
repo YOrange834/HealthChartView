@@ -11,6 +11,7 @@
 #import "ECGShareViewController.h"
 #import "ECGTestViewController.h"
 #import "BooldOxyViewController.h"
+#import "SleepViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -24,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"HealthChartView";
-    _arr = @[@"血压图",@"心电图报告",@"实时绘制心电图",@"血氧图"];
+    _arr = @[@"血压图",@"心电图报告",@"实时绘制心电图",@"血氧图",@"睡眠图"];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
@@ -59,6 +60,10 @@
     }
     if ([title isEqualToString:@"血氧图"]) {
         [self.navigationController pushViewController:[BooldOxyViewController new] animated:YES];
+        return;
+    }
+    if ([title isEqualToString:@"睡眠图"]) {
+        [self.navigationController pushViewController:[SleepViewController new] animated:YES];
         return;
     }
 }

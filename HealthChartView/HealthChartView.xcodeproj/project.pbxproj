@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0477DF7125996C25007AD581 /* SleepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0477DF6F25996C25007AD581 /* SleepViewController.m */; };
+		0477DF7225996C25007AD581 /* SleepViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0477DF7025996C25007AD581 /* SleepViewController.xib */; };
+		0477DF7725996C59007AD581 /* SleepChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0477DF7625996C59007AD581 /* SleepChartView.m */; };
+		0477DF7D25996C75007AD581 /* SleepLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0477DF7C25996C75007AD581 /* SleepLineView.m */; };
+		0477DF8325996C99007AD581 /* SleepValueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0477DF8225996C99007AD581 /* SleepValueModel.m */; };
+		0477DF8825996CB2007AD581 /* SleepInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0477DF8725996CB2007AD581 /* SleepInfoModel.m */; };
 		047A391D2597167C008B6E5B /* BooldOxyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A391B2597167C008B6E5B /* BooldOxyViewController.m */; };
 		047A391E2597167C008B6E5B /* BooldOxyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047A391C2597167C008B6E5B /* BooldOxyViewController.xib */; };
 		047A392B259717BE008B6E5B /* OxyChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A392A259717BE008B6E5B /* OxyChartView.m */; };
@@ -42,6 +48,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0477DF6E25996C25007AD581 /* SleepViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SleepViewController.h; sourceTree = "<group>"; };
+		0477DF6F25996C25007AD581 /* SleepViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SleepViewController.m; sourceTree = "<group>"; };
+		0477DF7025996C25007AD581 /* SleepViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SleepViewController.xib; sourceTree = "<group>"; };
+		0477DF7525996C59007AD581 /* SleepChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SleepChartView.h; sourceTree = "<group>"; };
+		0477DF7625996C59007AD581 /* SleepChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SleepChartView.m; sourceTree = "<group>"; };
+		0477DF7B25996C75007AD581 /* SleepLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SleepLineView.h; sourceTree = "<group>"; };
+		0477DF7C25996C75007AD581 /* SleepLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SleepLineView.m; sourceTree = "<group>"; };
+		0477DF8125996C99007AD581 /* SleepValueModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SleepValueModel.h; sourceTree = "<group>"; };
+		0477DF8225996C99007AD581 /* SleepValueModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SleepValueModel.m; sourceTree = "<group>"; };
+		0477DF8625996CB2007AD581 /* SleepInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SleepInfoModel.h; sourceTree = "<group>"; };
+		0477DF8725996CB2007AD581 /* SleepInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SleepInfoModel.m; sourceTree = "<group>"; };
 		047A391A2597167C008B6E5B /* BooldOxyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BooldOxyViewController.h; sourceTree = "<group>"; };
 		047A391B2597167C008B6E5B /* BooldOxyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BooldOxyViewController.m; sourceTree = "<group>"; };
 		047A391C2597167C008B6E5B /* BooldOxyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BooldOxyViewController.xib; sourceTree = "<group>"; };
@@ -110,6 +127,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0477DF6D25996C06007AD581 /* Sleep */ = {
+			isa = PBXGroup;
+			children = (
+				0477DF6E25996C25007AD581 /* SleepViewController.h */,
+				0477DF6F25996C25007AD581 /* SleepViewController.m */,
+				0477DF7025996C25007AD581 /* SleepViewController.xib */,
+			);
+			path = Sleep;
+			sourceTree = "<group>";
+		};
+		0477DF7425996C40007AD581 /* Sleep */ = {
+			isa = PBXGroup;
+			children = (
+				0477DF8025996C79007AD581 /* model */,
+				0477DF7A25996C67007AD581 /* view */,
+				0477DF7525996C59007AD581 /* SleepChartView.h */,
+				0477DF7625996C59007AD581 /* SleepChartView.m */,
+			);
+			path = Sleep;
+			sourceTree = "<group>";
+		};
+		0477DF7A25996C67007AD581 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				0477DF7B25996C75007AD581 /* SleepLineView.h */,
+				0477DF7C25996C75007AD581 /* SleepLineView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		0477DF8025996C79007AD581 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				0477DF8125996C99007AD581 /* SleepValueModel.h */,
+				0477DF8225996C99007AD581 /* SleepValueModel.m */,
+				0477DF8625996CB2007AD581 /* SleepInfoModel.h */,
+				0477DF8725996CB2007AD581 /* SleepInfoModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		047A39192597165D008B6E5B /* BooldOxy */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +236,7 @@
 		638EE253248A368C00978764 /* ChartView */ = {
 			isa = PBXGroup;
 			children = (
+				0477DF7425996C40007AD581 /* Sleep */,
 				047A392725971796008B6E5B /* Oxy */,
 				638EE27D248A511B00978764 /* Base */,
 				638EE255248A368C00978764 /* Boold */,
@@ -237,6 +296,7 @@
 		638EE271248A4B6700978764 /* mian */ = {
 			isa = PBXGroup;
 			children = (
+				0477DF6D25996C06007AD581 /* Sleep */,
 				047A39192597165D008B6E5B /* BooldOxy */,
 				63E647572539313A00CCA040 /* ECG */,
 				63D8DFE224F895E00096BFA7 /* ECGReport */,
@@ -396,6 +456,7 @@
 				63E6475C2539315300CCA040 /* ECGTestViewController.xib in Resources */,
 				638EE245248A367800978764 /* Main.storyboard in Resources */,
 				638EE27C248A4C9900978764 /* BooldPreViewController.xib in Resources */,
+				0477DF7225996C25007AD581 /* SleepViewController.xib in Resources */,
 				047A391E2597167C008B6E5B /* BooldOxyViewController.xib in Resources */,
 				638EE276248A4B8400978764 /* MainViewController.xib in Resources */,
 			);
@@ -413,9 +474,12 @@
 				638EE25F248A368C00978764 /* YOBaseChartView.m in Sources */,
 				047A392B259717BE008B6E5B /* OxyChartView.m in Sources */,
 				638EE268248A38E200978764 /* YOBooldPressureView.m in Sources */,
+				0477DF8825996CB2007AD581 /* SleepInfoModel.m in Sources */,
 				638EE242248A367800978764 /* ViewController.m in Sources */,
 				638EE261248A368C00978764 /* YOXAxis.m in Sources */,
+				0477DF7125996C25007AD581 /* SleepViewController.m in Sources */,
 				047A391D2597167C008B6E5B /* BooldOxyViewController.m in Sources */,
+				0477DF7725996C59007AD581 /* SleepChartView.m in Sources */,
 				638EE262248A368C00978764 /* YOChartViewModel.m in Sources */,
 				638EE270248A490000978764 /* YOBPValueModel.m in Sources */,
 				63D8DFF124F8962D0096BFA7 /* ECGScalView.m in Sources */,
@@ -423,10 +487,12 @@
 				638EE260248A368C00978764 /* YOYAxis.m in Sources */,
 				63E647612539316700CCA040 /* ECGChartView.m in Sources */,
 				638EE27B248A4C9900978764 /* BooldPreViewController.m in Sources */,
+				0477DF8325996C99007AD581 /* SleepValueModel.m in Sources */,
 				638EE275248A4B8400978764 /* MainViewController.m in Sources */,
 				638EE26C248A3CE600978764 /* YOBooldPressureBarView.m in Sources */,
 				638EE23C248A367800978764 /* AppDelegate.m in Sources */,
 				638EE24D248A367D00978764 /* main.m in Sources */,
+				0477DF7D25996C75007AD581 /* SleepLineView.m in Sources */,
 				047A39302597187D008B6E5B /* OxyLineView.m in Sources */,
 				63D8DFF424F8962D0096BFA7 /* ECGShareView.m in Sources */,
 				638EE23F248A367800978764 /* SceneDelegate.m in Sources */,
