@@ -12,6 +12,8 @@
 #import "ECGTestViewController.h"
 #import "BooldOxyViewController.h"
 #import "SleepViewController.h"
+#import "HRVViewController.h"
+#import "HeartRateViewController.h"
 
 @interface MainViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -25,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"HealthChartView";
-    _arr = @[@"血压图",@"心电图报告",@"实时绘制心电图",@"血氧图",@"睡眠图"];
+    _arr = @[@"血压图",@"心电图报告",@"实时绘制心电图",@"血氧图",@"睡眠图",@"HRV",@"心率",];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
@@ -64,6 +66,14 @@
     }
     if ([title isEqualToString:@"睡眠图"]) {
         [self.navigationController pushViewController:[SleepViewController new] animated:YES];
+        return;
+    }
+    if ([title isEqualToString:@"HRV"]) {
+        [self.navigationController pushViewController:[HRVViewController new] animated:YES];
+        return;
+    }
+    if ([title isEqualToString:@"心率"]) {
+        [self.navigationController pushViewController:[HeartRateViewController new] animated:YES];
         return;
     }
 }

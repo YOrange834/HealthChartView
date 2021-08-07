@@ -17,6 +17,13 @@
 		047A391E2597167C008B6E5B /* BooldOxyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047A391C2597167C008B6E5B /* BooldOxyViewController.xib */; };
 		047A392B259717BE008B6E5B /* OxyChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A392A259717BE008B6E5B /* OxyChartView.m */; };
 		047A39302597187D008B6E5B /* OxyLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A392F2597187D008B6E5B /* OxyLineView.m */; };
+		0E82123F26BED3A50009CAF6 /* HRVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E82123D26BED3A50009CAF6 /* HRVViewController.m */; };
+		0E82124026BED3A50009CAF6 /* HRVViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E82123E26BED3A50009CAF6 /* HRVViewController.xib */; };
+		0E82124426BED3B80009CAF6 /* HeartRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E82124226BED3B80009CAF6 /* HeartRateViewController.m */; };
+		0E82124526BED3B80009CAF6 /* HeartRateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E82124326BED3B80009CAF6 /* HeartRateViewController.xib */; };
+		0E82124926BED42D0009CAF6 /* YOHRVChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E82124826BED42D0009CAF6 /* YOHRVChartView.m */; };
+		0E82124C26BED4D80009CAF6 /* YOHRVBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E82124B26BED4D80009CAF6 /* YOHRVBarView.m */; };
+		0E82125126BEDF280009CAF6 /* hahah.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E82125026BEDF280009CAF6 /* hahah.plist */; };
 		638EE23C248A367800978764 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 638EE23B248A367800978764 /* AppDelegate.m */; };
 		638EE23F248A367800978764 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 638EE23E248A367800978764 /* SceneDelegate.m */; };
 		638EE242248A367800978764 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638EE241248A367800978764 /* ViewController.m */; };
@@ -66,6 +73,17 @@
 		047A392A259717BE008B6E5B /* OxyChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OxyChartView.m; sourceTree = "<group>"; };
 		047A392E2597187D008B6E5B /* OxyLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OxyLineView.h; sourceTree = "<group>"; };
 		047A392F2597187D008B6E5B /* OxyLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OxyLineView.m; sourceTree = "<group>"; };
+		0E82123C26BED3A50009CAF6 /* HRVViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRVViewController.h; sourceTree = "<group>"; };
+		0E82123D26BED3A50009CAF6 /* HRVViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRVViewController.m; sourceTree = "<group>"; };
+		0E82123E26BED3A50009CAF6 /* HRVViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HRVViewController.xib; sourceTree = "<group>"; };
+		0E82124126BED3B80009CAF6 /* HeartRateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeartRateViewController.h; sourceTree = "<group>"; };
+		0E82124226BED3B80009CAF6 /* HeartRateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeartRateViewController.m; sourceTree = "<group>"; };
+		0E82124326BED3B80009CAF6 /* HeartRateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeartRateViewController.xib; sourceTree = "<group>"; };
+		0E82124726BED42D0009CAF6 /* YOHRVChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YOHRVChartView.h; sourceTree = "<group>"; };
+		0E82124826BED42D0009CAF6 /* YOHRVChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YOHRVChartView.m; sourceTree = "<group>"; };
+		0E82124A26BED4D80009CAF6 /* YOHRVBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YOHRVBarView.h; sourceTree = "<group>"; };
+		0E82124B26BED4D80009CAF6 /* YOHRVBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YOHRVBarView.m; sourceTree = "<group>"; };
+		0E82125026BEDF280009CAF6 /* hahah.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = hahah.plist; sourceTree = "<group>"; };
 		638EE237248A367800978764 /* HealthChartView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthChartView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		638EE23A248A367800978764 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		638EE23B248A367800978764 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -197,6 +215,46 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		0E82123A26BED3750009CAF6 /* HRV */ = {
+			isa = PBXGroup;
+			children = (
+				0E82125026BEDF280009CAF6 /* hahah.plist */,
+				0E82123C26BED3A50009CAF6 /* HRVViewController.h */,
+				0E82123D26BED3A50009CAF6 /* HRVViewController.m */,
+				0E82123E26BED3A50009CAF6 /* HRVViewController.xib */,
+			);
+			path = HRV;
+			sourceTree = "<group>";
+		};
+		0E82123B26BED37D0009CAF6 /* HeartRate */ = {
+			isa = PBXGroup;
+			children = (
+				0E82124126BED3B80009CAF6 /* HeartRateViewController.h */,
+				0E82124226BED3B80009CAF6 /* HeartRateViewController.m */,
+				0E82124326BED3B80009CAF6 /* HeartRateViewController.xib */,
+			);
+			path = HeartRate;
+			sourceTree = "<group>";
+		};
+		0E82124626BED3FE0009CAF6 /* HRV */ = {
+			isa = PBXGroup;
+			children = (
+				0E82124D26BED4DB0009CAF6 /* view */,
+				0E82124726BED42D0009CAF6 /* YOHRVChartView.h */,
+				0E82124826BED42D0009CAF6 /* YOHRVChartView.m */,
+			);
+			path = HRV;
+			sourceTree = "<group>";
+		};
+		0E82124D26BED4DB0009CAF6 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				0E82124A26BED4D80009CAF6 /* YOHRVBarView.h */,
+				0E82124B26BED4D80009CAF6 /* YOHRVBarView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		638EE22E248A367800978764 = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +294,7 @@
 		638EE253248A368C00978764 /* ChartView */ = {
 			isa = PBXGroup;
 			children = (
+				0E82124626BED3FE0009CAF6 /* HRV */,
 				0477DF7425996C40007AD581 /* Sleep */,
 				047A392725971796008B6E5B /* Oxy */,
 				638EE27D248A511B00978764 /* Base */,
@@ -296,6 +355,8 @@
 		638EE271248A4B6700978764 /* mian */ = {
 			isa = PBXGroup;
 			children = (
+				0E82123B26BED37D0009CAF6 /* HeartRate */,
+				0E82123A26BED3750009CAF6 /* HRV */,
 				0477DF6D25996C06007AD581 /* Sleep */,
 				047A39192597165D008B6E5B /* BooldOxy */,
 				63E647572539313A00CCA040 /* ECG */,
@@ -450,9 +511,12 @@
 			files = (
 				638EE24A248A367D00978764 /* LaunchScreen.storyboard in Resources */,
 				63D8DFF724F899E20096BFA7 /* heart.plist in Resources */,
+				0E82125126BEDF280009CAF6 /* hahah.plist in Resources */,
 				638EE247248A367D00978764 /* Assets.xcassets in Resources */,
+				0E82124526BED3B80009CAF6 /* HeartRateViewController.xib in Resources */,
 				63D8DFE624F8961F0096BFA7 /* ECGShareViewController.xib in Resources */,
 				63D8DFF224F8962D0096BFA7 /* ECGScalView.xib in Resources */,
+				0E82124026BED3A50009CAF6 /* HRVViewController.xib in Resources */,
 				63E6475C2539315300CCA040 /* ECGTestViewController.xib in Resources */,
 				638EE245248A367800978764 /* Main.storyboard in Resources */,
 				638EE27C248A4C9900978764 /* BooldPreViewController.xib in Resources */,
@@ -482,17 +546,21 @@
 				0477DF7725996C59007AD581 /* SleepChartView.m in Sources */,
 				638EE262248A368C00978764 /* YOChartViewModel.m in Sources */,
 				638EE270248A490000978764 /* YOBPValueModel.m in Sources */,
+				0E82123F26BED3A50009CAF6 /* HRVViewController.m in Sources */,
 				63D8DFF124F8962D0096BFA7 /* ECGScalView.m in Sources */,
 				63D8DFF324F8962D0096BFA7 /* ECGGridView.m in Sources */,
 				638EE260248A368C00978764 /* YOYAxis.m in Sources */,
 				63E647612539316700CCA040 /* ECGChartView.m in Sources */,
 				638EE27B248A4C9900978764 /* BooldPreViewController.m in Sources */,
 				0477DF8325996C99007AD581 /* SleepValueModel.m in Sources */,
+				0E82124426BED3B80009CAF6 /* HeartRateViewController.m in Sources */,
 				638EE275248A4B8400978764 /* MainViewController.m in Sources */,
 				638EE26C248A3CE600978764 /* YOBooldPressureBarView.m in Sources */,
 				638EE23C248A367800978764 /* AppDelegate.m in Sources */,
+				0E82124C26BED4D80009CAF6 /* YOHRVBarView.m in Sources */,
 				638EE24D248A367D00978764 /* main.m in Sources */,
 				0477DF7D25996C75007AD581 /* SleepLineView.m in Sources */,
+				0E82124926BED42D0009CAF6 /* YOHRVChartView.m in Sources */,
 				047A39302597187D008B6E5B /* OxyLineView.m in Sources */,
 				63D8DFF424F8962D0096BFA7 /* ECGShareView.m in Sources */,
 				638EE23F248A367800978764 /* SceneDelegate.m in Sources */,
