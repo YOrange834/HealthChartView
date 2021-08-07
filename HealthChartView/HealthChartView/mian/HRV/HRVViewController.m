@@ -33,7 +33,7 @@
     
     
     bdView.yAxis.dataArr = @[@"0",@"100",@"210"];
-    bdView.yAxis.rateArr = @[@"1",@"0.33",@"0"];
+    bdView.yAxis.rateArr = @[@"1",[NSString stringWithFormat:@"%.2f",10.0 / 21.0],@"0"];
     
     
     bdView.yAxis.lableColor = [UIColor whiteColor];
@@ -46,9 +46,9 @@
 //    UILabel *lab = [[UILabel alloc]initWithFrame:(CGRectMake(0, 0, 80, 30))];
 //    [vi addSubview:lab];
 //    lab.tag = 102;
-//    
+//
 //    [bdView detailViewConfiger:vi];
-//    
+//
 //    bdView.delegate = self;
     
     
