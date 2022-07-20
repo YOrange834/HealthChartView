@@ -36,7 +36,7 @@ TODO: Add long description of the pod here.
   #   'HealthChartView' => ['HealthChartView/Assets/*.png']
   # }
 
-  spec.framework  = "Foundation"
+  s.framework  = "Foundation"
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
