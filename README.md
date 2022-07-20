@@ -1,6 +1,18 @@
 # HealthChartView
 健康类型项目，心电图，心率图，睡眠图，血氧，血压，HRV
 
+#### 使用方式
+
+1. 手动导入，直接将项目里面ChartView模块下的文件拖入项目即可
+
+2. cocoapods 导入
+
+   ```ruby
+   pod 'HealthChartView', :git => 'https://github.com/YOrange834/HealthChartView.git'
+   ```
+
+
+
 #### 已经完成的功能：
 
 **心电图，血氧，血压，睡眠图,HRV**
