@@ -40,12 +40,3 @@
 * Boold
   * YOBooldPressure 主要用于定义坐标轴，充当画布的功能
   * view 主要用于画图标
-
-#### 画图核心
-
-各大平台画图一般都是：画布 + 路径
-
-iOS图标绘制
-
-* UIBezierPath （路径），先用UIBezierPath将路径绘制出来
-* CAShapeLayer (画布) ，将路径渲染出来
